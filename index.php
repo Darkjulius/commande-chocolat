@@ -1,3 +1,7 @@
+<?php
+include("./include/_config.php")
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -6,6 +10,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Commande</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -19,12 +27,13 @@
                 <option value="4">4</option>
                 <option value="5">5</option>
             </select>
-            <p>Tarif: 20 &euro;</p>
-            <p>En commandant maintenant, vous aurez le droit à une remise immédiate de 5 &euro;</p>
+            <p>Tarif: <span class="orangered"> <?= TARIF ?> &euro;</span></p>
+            <p><span class="orangered">En commandant maintenant, vous aurez le droit à une remise immédiate de <?= REMISE ?> &euro;</span></p>
             <p>
                 <input type="submit" value="Commander">
             </p>
         </form>
+        <img src="./images/chocolat.png" alt="Chocolat">
     </section>
 </body>
 

@@ -36,7 +36,7 @@ input[type="submit"]:hover {
   color: #000;
   transform: translateY(-7px);
 }
-ul {
+ul{
   text-align: left;
 }
 section {
@@ -54,4 +54,9 @@ select {
   font-size: 1.3rem;
   outline: none;
   padding: 3px 20px;
+}
+
+.orangered {
+  color: orangered;
+  font-weight: 700;
 }

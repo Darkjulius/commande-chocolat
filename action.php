@@ -1,3 +1,10 @@
+<?php
+include("./include/_config.php");
+$totalPayer = $_POST["qte"] * TARIF;
+$totalRemise = $totalPayer - REMISE;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,11 +20,11 @@
     <section>
         <h1>Merci pour votre commande</h1>
         <ul>
-            <li>Nombre de boîtes commandées: </li>
-            <li>Tarif unitaire: 20 &euro;</li>
-            <li>Total à payer: </li>
-            <li>Remise: euros</li>
-            <li>Nouveau total à payer</li>
+            <li>Nombre de boîtes commandées: <span class="orangered"><?= $_POST["qte"] ?></span></li>
+            <li>Tarif unitaire: <span class="orangered"><?= TARIF ?> &euro;</span></li>
+            <li>Total à payer: <span class="orangered"><?= $totalPayer; ?> &euro;</span></li>
+            <li>Remise: <span class="orangered"><?= REMISE ?> &euro;</span></li>
+            <li><strong>Nouveau total à payer:</strong> <span class="orangered"><?= $totalRemise ?> &euro;</span></li>
         </ul>
     </section>
 </body>
